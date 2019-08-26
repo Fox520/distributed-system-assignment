@@ -49,3 +49,12 @@ It receives a reference number and if there's an available table, the guests sea
 Receives guest information e.g. *reference number* and can interact with the guests. Possible actions from guest:
 * order food/beverages
 * request bill -> do payment
+* request menu
+
+**Ordering:**
+* guest invokes `table`->newOrder(orderInfomation)
+* table invokes deliver(order) at `waiter` service
+* `waiter` responds to guest [maybe have a method `acceptOrder` in client🤷‍]
+
+### *Waiter service*
+Doesn't do much other that receive order information from `table` and give a reponse to guest.
