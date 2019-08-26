@@ -5,8 +5,8 @@ The task is to design a fully automated restaurant application, named **kent**. 
 
 Kent consists of a client module and a server which is composed of multiple microservices. Note: communication is done using [gRPC](https://grpc.io/).
 
-# Clients
-Client remotely invokes **book** function (returns unique reference number) passing the following:
+# Client
+Client (guest) remotely invokes **book** function (returns unique reference number) passing the following:
 * reservation date
 * preferred time
 * the number of guests
@@ -40,3 +40,12 @@ Parameters  : reference_number          - string
 
 Return      : confirmation_code         - boolean
 ```
+
+# Services
+There are various services that handle guests.
+### *Welcome service*
+It receives a reference number and if there's an available table, the guests seat instanly. Otherwise, the guests join a waiting list sorted in the order of time the deposit was paid during booking.
+### *Table service*
+Receives guest information e.g. *reference number* and can interact with the guests. Possible actions from guest:
+* order food/beverages
+* request bill -> do payment
