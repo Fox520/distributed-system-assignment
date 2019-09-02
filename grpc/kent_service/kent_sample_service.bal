@@ -5,7 +5,7 @@ listener grpc:Listener ep = new (9000);
 service kent on ep {
 
     resource function book(grpc:Caller caller, BookingDetails value) {
-        // Implementation goes here.
+        // Implementation goes here. ..
 
         // You should return a BookingId
     }
