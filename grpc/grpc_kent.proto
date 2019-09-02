@@ -5,6 +5,11 @@ import "google/protobuf/wrappers.proto";
 service kent {
     rpc book(BookingDetails) returns (BookingId);
     rpc deposit(DepositDetails) returns (Confirmation);
+    // return: false -> client keeps polling isSeated() else if true
+    // client can proceed to interact with table service
+    rpc getTable(BookingId) returns (Confirmation);
+    // checks if client is seated
+    rpc isSeated(BookingId) returns (Confirmation);
 }
 
 message Date {
@@ -37,4 +42,9 @@ message DepositDetails{
 
 message Confirmation {
     bool confirmed = 1;
+}
+
+message TableDetails{
+    BookingId bi = 1;
+    BookingDetails bd = 2;
 }
