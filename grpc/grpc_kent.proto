@@ -21,7 +21,7 @@ message Time {
 message BookingDetails {
     Date date = 1;
     Time time = 2;
-    int32 gests = 3;
+    int32 guests = 3;
     int32 duration = 4;
 }
 
