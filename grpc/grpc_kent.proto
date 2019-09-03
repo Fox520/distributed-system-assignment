@@ -1,15 +1,32 @@
 syntax = "proto3";
 package grpc_service;
-import "google/protobuf/wrappers.proto";
+// import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
 
 service kent {
     rpc book(BookingDetails) returns (BookingId);
     rpc deposit(DepositDetails) returns (Confirmation);
+}
+
+service welcome {
     // return: false -> client keeps polling isSeated() else if true
     // client can proceed to interact with table service
     rpc getTable(BookingId) returns (Confirmation);
     // checks if client is seated
     rpc isSeated(BookingId) returns (Confirmation);
+}
+
+service table {
+    // add them if not full
+    rpc addGuests (BookingId) returns (Confirmation);
+    // not certain of what should be returned
+    rpc leaveTable (BookingId) returns (Confirmation);
+    rpc requestMenu (google.protobuf.Empty) returns (TheMenu);
+    rpc newOrder (OrderDetails) returns (OrderResult);
+}
+
+service waiter{
+    rpc caterOrder (OrderDetails) returns (OrderResult);
 }
 
 message Date {
@@ -35,13 +52,27 @@ message BookingId {
     BookingDetails bd = 2;
 }
 
-message DepositDetails{
+message DepositDetails {
     BookingId id = 1;
     float money = 2;
 }
 
 message Confirmation {
     bool confirmed = 1;
+}
+// possibly add more details
+message OrderResult {
+    float total = 1;
+}
+
+message OrderDetails {
+    // json string
+    string orderInfo = 1;
+}
+
+message TheMenu {
+    // json string
+    string menu = 1;
 }
 
 message TableDetails{

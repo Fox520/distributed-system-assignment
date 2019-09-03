@@ -1,6 +1,5 @@
 import ballerina/grpc;
 
-listener grpc:Listener ep = new (9000);
 
 service kent on ep {
 
@@ -10,16 +9,6 @@ service kent on ep {
         // You should return a BookingId
     }
     resource function deposit(grpc:Caller caller, DepositDetails value) {
-        // Implementation goes here.
-
-        // You should return a Confirmation
-    }
-    resource function getTable(grpc:Caller caller, BookingId value) {
-        // Implementation goes here.
-
-        // You should return a Confirmation
-    }
-    resource function isSeated(grpc:Caller caller, BookingId value) {
         // Implementation goes here.
 
         // You should return a Confirmation
