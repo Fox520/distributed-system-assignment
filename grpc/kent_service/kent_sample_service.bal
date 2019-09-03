@@ -1,13 +1,23 @@
 import ballerina/grpc;
+import ballerina/io;
 
-listener grpc:Listener ep = new (9000);
+map<BookingDetails> bookMap = {};
+
+listener grpc:Listener ep = new (9090);
 
 service kent on ep {
 
     resource function book(grpc:Caller caller, BookingDetails value) {
         // Implementation goes here.
-
+        io:println(value);
+        BookingId bId = {bookigId: "sssss", bd: value}; 
+        error? result =  ();
+        result = caller->send(bId);
+        result = caller->complete();
         // You should return a BookingId
+
+
+
     }
     resource function deposit(grpc:Caller caller, DepositDetails value) {
         // Implementation goes here.
