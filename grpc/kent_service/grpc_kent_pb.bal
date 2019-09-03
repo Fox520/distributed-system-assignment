@@ -76,15 +76,15 @@ public type kentClient client object {
 };
 
 type Date record {|
-    int int_day;
-    int int_month;
-    int int_year;
+    int day;
+    int month;
+    int year;
     
 |};
 
 
 type Time record {|
-    int int_hour;
+    int hour;
     int min;
     
 |};
