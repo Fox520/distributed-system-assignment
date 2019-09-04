@@ -8,7 +8,8 @@ public function main (string... args) {
     kentBlockingClient blockingEp = new("http://localhost:9090");
 
     reservation(blockingEp, 12,2,2019,1,30,3);
-    reservation(blockingEp, 12,2,2019,2,0,4);
+    reservation(blockingEp, 12,2,2019,4,0,4);
+    reservation(blockingEp, 12,2,2019,3,0,4);
 }
 
 
@@ -31,4 +32,3 @@ public function reservation(kentBlockingClient ep, int day, int month, int year,
         io:println("Response: ", bId ,"\n");
     }
 }
-
