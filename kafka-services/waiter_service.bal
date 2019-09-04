@@ -14,7 +14,7 @@ kafka:ConsumerConfig waiterConfig = {
 // Create kafka listener
 listener kafka:SimpleConsumer waiter_consumer = new(waiterConfig);
 
-service waiterService on kitchen_consumer{
+service waiterService on waiter_consumer{
     resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records) {
         foreach var entry in records {
             byte[] serializedMsg = entry.value;
