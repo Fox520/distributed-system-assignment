@@ -1,5 +1,6 @@
 import ballerina/grpc;
 import ballerina/io;
+import ballerina/log;
 
 listener grpc:Listener ep = new (9090);
 
@@ -11,7 +12,7 @@ json booked = [];
 
 public function isAvailable(BookingId bd){
     int i = bd.bd.duration;
-    int j = 0;
+    int j = booked.length();
     int hour = i / 3600;
     int min = (i % 3600) / 60;
     hour = bd.bd.time.hour + hour;
@@ -47,7 +48,8 @@ public function isAvailable(BookingId bd){
                          io:println("We are!");
                     }
                     else{
-                        io:println("We are overbooked");
+                        log:printInfo("We are overbooked");
+                        log:printInfo(endHour + " " + endMin + " " + startHour + " " + startMin);
                     }
                 }
 
@@ -56,7 +58,7 @@ public function isAvailable(BookingId bd){
     }
     else{
         booked[0] = b;
-
+        log:printInfo("initial book done");
     }
 
 
