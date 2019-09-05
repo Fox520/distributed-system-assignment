@@ -10,6 +10,11 @@ public function main (string... args) {
     reservation(blockingEp, 12,2,2019,1,30,3);
     reservation(blockingEp, 12,2,2019,4,0,4);
     reservation(blockingEp, 12,2,2019,3,0,4);
+    reservation(blockingEp, 12,2,2019,3,0,4);
+    reservation(blockingEp, 12,2,2019,3,0,4);
+    reservation(blockingEp, 12,2,2019,3,0,4);
+    reservation(blockingEp, 11,5,2019,3,0,4);
+   
 }
 
 
