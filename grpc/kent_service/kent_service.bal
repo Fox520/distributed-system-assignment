@@ -10,6 +10,7 @@ listener grpc:Listener ep = new (9090);
 int count = 0;
 json reservation = [];
 json booking = [];
+json overbooks = [];
 int bcount = 0;
 string[3] tables = ["T1","T2","T3"];
 string []cantGet = [];
@@ -79,6 +80,7 @@ function isAvailable(BookingId bd){
                         io:println("Overbook situation....\n forward to deposit function please...");
                         // implement the deposit function
                         // for  ease reference after the deposit save the booking in a separete json that has only the reservation that has been payed
+                        
                     }
                     else{
                         booking[item].details[booking[item].details.length()] = b;
@@ -140,10 +142,5 @@ service kent on ep {
         result = caller->send(bId);
         result = caller->complete();
 
-    }
-    resource function deposit(grpc:Caller caller, DepositDetails value) {
-        // Implementation goes here.
-
-        // You should return a Confirmation
     }
 }
