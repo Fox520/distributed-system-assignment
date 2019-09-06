@@ -10,12 +10,14 @@ listener grpc:Listener ep = new (9090);
 int count = 0;
 json reservation = [];
 json booking = [];
-json overbooks = [];
+// should be sorted from greatest deposit to least
+BookingDetails[] overbooks = [];
 int bcount = 0;
 string[3] tables = ["T1","T2","T3"];
 string []cantGet = [];
 int cg = 0; // count cant get tables
 int cd = 0; // count different dates
+float MINIMUM_DEPOSIT_AMOUNT = 300;
 
 function isAvailable(BookingId bd){
 
@@ -80,7 +82,7 @@ function isAvailable(BookingId bd){
                         io:println("Overbook situation....\n forward to deposit function please...");
                         // implement the deposit function
                         // for  ease reference after the deposit save the booking in a separete json that has only the reservation that has been payed
-                        
+                        deposit(bd.bd);
                     }
                     else{
                         booking[item].details[booking[item].details.length()] = b;
@@ -116,12 +118,38 @@ function isAvailable(BookingId bd){
         bcount = bcount + 1;
     }
 
-    io:println("\n",booking,"\n\n");
+    //io:println("\n",booking,"\n\n");
 
 }
-public function getTable(BookingId bd){    
 
+
+function deposit(BookingDetails bookingDetails){
+    if(bookingDetails.depositAmount >= MINIMUM_DEPOSIT_AMOUNT){
+        overbooks[overbooks.length()] = bookingDetails;
+        sortOverbooks();
+    }
 }
+
+function sortOverbooks(){
+    foreach int i in 0..<overbooks.length(){
+        int j = i;
+        while (j < overbooks.length()) {
+            if(overbooks[j].depositAmount > overbooks[i].depositAmount){
+                // swap
+                float c = overbooks[j].depositAmount;
+                overbooks[j].depositAmount = overbooks[i].depositAmount;
+                overbooks[i].depositAmount = c;
+            }
+            j += 1;
+        }
+    }
+    io:println(overbooks);
+    foreach BookingDetails item in overbooks {
+        io:println(item.depositAmount);
+        
+    }
+}
+
 service kent on ep {
 
     resource function book(grpc:Caller caller, BookingDetails value) {
