@@ -3,9 +3,8 @@ package grpc_service;
 import "google/protobuf/wrappers.proto";
 
 service kent {
-    // to ease things and for time constraints, keep deposit functionality in book resource
-    rpc book(BookingDetails) returns (BookingId);
-    //rpc deposit(DepositDetails) returns (Confirmation);
+    rpc book(BookingDetails) returns (BookingResponse);
+    rpc deposit(DepositDetails) returns (Confirmation);
 }
 
 message Date {
@@ -24,15 +23,24 @@ message BookingDetails {
     Time time = 2;
     int32 guest = 3;
     int32 duration = 4;
-    // incase of overbooked situation
-    float depositAmount = 5;
 }
 
 message BookingId {
-    string bookigId = 1;
+    string bookingId = 1;
     BookingDetails bd = 2;
+}
+
+message BookingResponse {
+    BookingId bookingId = 1;
+    Confirmation conf = 2;
 }
 
 message Confirmation {
     bool confirmed = 1;
+    // BookingId bookingId = 2;
+}
+
+message DepositDetails {
+    float depositAmount = 1;
+    BookingId bookingId = 2;
 }
