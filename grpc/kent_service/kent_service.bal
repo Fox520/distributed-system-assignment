@@ -11,7 +11,7 @@ int count = 0;
 json reservation = [];
 json booking = [];
 // should be sorted from greatest deposit to least
-BookingDetails[] overbooks = [];
+DepositDetails[] overbooks = [];
 int bcount = 0;
 string[3] tables = ["T1", "T2", "T3"];
 string[] cantGet = [];
@@ -19,7 +19,7 @@ int cg = 0;// count cant get tables
 int cd = 0;// count different dates
 float MINIMUM_DEPOSIT_AMOUNT = 300;
 
-function isAvailable(BookingId bd) {
+function isAvailable(BookingId bd) returns (boolean?) {
 
     int i = bd.bd.duration;
     int hour = i / 3600;
@@ -35,7 +35,7 @@ function isAvailable(BookingId bd) {
 
     string date = bd.bd.date.day + "-" + bd.bd.date.month + "-" + bd.bd.date.year;
     json b = {
-        bookingId: bd.bookigId,
+        bookingId: bd.bookingId,
         fromTime: bd.bd.time.hour + ":" + bd.bd.time.min,
         toTime: hour + ":" + min,
         gotTable: "no"
@@ -81,8 +81,7 @@ function isAvailable(BookingId bd) {
                     if (b.gotTable.toString().equalsIgnoreCase("no")) {
                         io:println("Overbook situation....\n forward to deposit function please...");
                         // implement the deposit function
-                        // for  ease reference after the deposit save the booking in a separete json that has only the reservation that has been payed
-                        deposit(bd.bd);
+                        return false;
                     }
                     else {
                         booking[item].details[booking[item].details.length()] = b;
@@ -119,39 +118,13 @@ function isAvailable(BookingId bd) {
 
 }
 
-
-function deposit(BookingDetails bookingDetails) {
-    if (bookingDetails.depositAmount >= MINIMUM_DEPOSIT_AMOUNT) {
-        overbooks[overbooks.length()] = bookingDetails;
-        sortOverbooks();
-    }
-}
-
-function sortOverbooks() {
-    foreach int i in 0 ..< overbooks.length() {
-        int j = i;
-        while (j < overbooks.length()) {
-            if (overbooks[j].depositAmount > overbooks[i].depositAmount) {
-                // swap
-                float c = overbooks[j].depositAmount;
-                overbooks[j].depositAmount = overbooks[i].depositAmount;
-                overbooks[i].depositAmount = c;
-            }
-            j += 1;
-        }
-    }
-// foreach BookingDetails item in overbooks {
-//     io:println(item.depositAmount);
-// }
-}
-
 service kent on ep {
 
     resource function book(grpc:Caller caller, BookingDetails value) {
         // Implementation goes here.
         count = count + 1;
         BookingId bId = {
-            bookigId: "b" + count,
+            bookingId: "b" + count,
             bd: value
         };
         error? result = ();
@@ -162,11 +135,46 @@ service kent on ep {
         if (a is json) {
             reservation[count - 1] = a;
         }
-        isAvailable(bId);
+        boolean? available = isAvailable(bId);
+        BookingResponse br = {
+            bookingId: bId,
+            conf: {
+                confirmed: true
+            }
+        };
+        if (available is boolean && available == false) {
+            br.conf.confirmed = false;
+        }
 
-        // You should return a BookingId
-        result = caller->send(bId);
+        // You should return a BookingResponse
+        result = caller->send(br);
         result = caller->complete();
 
+    }
+
+    resource function deposit(grpc:Caller caller, DepositDetails dd) {
+        error? result;
+        Confirmation c = {
+            confirmed: false
+        };
+        // check deposit amount
+        if (dd.depositAmount >= MINIMUM_DEPOSIT_AMOUNT) {
+            // sort by deposit without external function
+            if (overbooks.length() > 0) {
+                foreach var item in 0 ..< overbooks.length() {
+                    if (overbooks[item].depositAmount < dd.depositAmount) {
+                        overbooks[item] = dd;
+                        c.confirmed = true;
+                    }
+                }
+
+            } else {
+                overbooks[overbooks.length()] = dd;
+                c.confirmed = true;
+            }
+        } else {
+            result = caller->send(c);
+            result = caller->complete();
+        }
     }
 }
