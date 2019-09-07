@@ -7,7 +7,7 @@ public function main (string... args) returns(error?) {
 
     kentBlockingClient blockingEp = new("http://localhost:9090");
 
-    any isConfirmed = reservation(blockingEp, 12,2,2019,1,30,3);
+    any brr = reservation(blockingEp, 12,2,2019,1,30,3);
     any isConfirmed2 = reservation(blockingEp, 12,2,2019,4,0,4);
     any isConfirmed3 = reservation(blockingEp, 12,2,2019,3,0,4);
     any isConfirmed4 = reservation(blockingEp, 12,2,2019,3,0,4);
@@ -15,16 +15,27 @@ public function main (string... args) returns(error?) {
     any isConfirmed6 = reservation(blockingEp, 12,2,2019,3,0,4);
     any isConfirmed7 = reservation(blockingEp, 11,5,2019,3,0,4);
 
-    if(isConfirmed is BookingResponse && !isConfirmed.conf.confirmed){
+    secc(brr, blockingEp);
+    secc(isConfirmed2, blockingEp);
+    secc(isConfirmed3, blockingEp);
+    secc(isConfirmed4, blockingEp);
+    secc(isConfirmed5, blockingEp);
+    secc(isConfirmed6, blockingEp);
+    secc(isConfirmed7, blockingEp);
+}
+
+public function secc(any brr, kentBlockingClient ep){
+    if(brr is BookingResponse){
         // overbooked, so secure spot with deposit
         // get money to deposit
-        Confirmation? | error? c = securePlace(blockingEp, <float>math:randomInRange(300, 500), isConfirmed.bookingId);
+        float da = <float>math:randomInRange(300, 500);
+        Confirmation? | error? c = securePlace(ep, da, brr.bookingId);
         if(c is Confirmation){
             if(c.confirmed){
                 io:println("Deposit successful");
                 // what to do after? 🤷
             }else{
-                io:println("Deposit amount too low. Minimum is $300");
+                io:println("Deposit amount ","{",da,"}" ," too low. Minimum is $300");
             }
         }else if (c is error){
             io:println("Error: ", c.reason(), " - ", c.detail().message, "\n\n");

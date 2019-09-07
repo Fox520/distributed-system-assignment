@@ -79,7 +79,7 @@ function isAvailable(BookingId bd) returns (boolean?) {
                         ct = 0;
                     }
                     if (b.gotTable.toString().equalsIgnoreCase("no")) {
-                        io:println("Overbook situation....\n forward to deposit function please...");
+                        //io:println("Overbook situation....\n forward to deposit function please...");
                         // implement the deposit function
                         return false;
                     }
@@ -114,10 +114,24 @@ function isAvailable(BookingId bd) returns (boolean?) {
         bcount = bcount + 1;
     }
 
-    io:println("\n", booking, "\n\n");
+    //io:println("\n", booking, "\n\n");
 
 }
 
+public function sortOverbooks() {
+    foreach int i in 0 ..< overbooks.length() {
+        int j = i;
+        while (j < overbooks.length()) {
+            if (overbooks[j].depositAmount > overbooks[i].depositAmount) {
+                // swap
+                float c = overbooks[j].depositAmount;
+                overbooks[j].depositAmount = overbooks[i].depositAmount;
+                overbooks[i].depositAmount = c;
+            }
+            j += 1;
+        }
+    }
+}
 service kent on ep {
 
     resource function book(grpc:Caller caller, BookingDetails value) {
@@ -159,22 +173,18 @@ service kent on ep {
         };
         // check deposit amount
         if (dd.depositAmount >= MINIMUM_DEPOSIT_AMOUNT) {
-            // sort by deposit without external function
-            if (overbooks.length() > 0) {
-                foreach var item in 0 ..< overbooks.length() {
-                    if (overbooks[item].depositAmount < dd.depositAmount) {
-                        overbooks[item] = dd;
-                        c.confirmed = true;
-                    }
-                }
-
-            } else {
-                overbooks[overbooks.length()] = dd;
-                c.confirmed = true;
-            }
-        } else {
-            result = caller->send(c);
-            result = caller->complete();
+            overbooks[overbooks.length()] = dd;
+            c.confirmed = true;
         }
+        
+        result = caller->send(c);
+        result = caller->complete();
+        sortOverbooks();
+        foreach var item in overbooks {
+            io:println(item.depositAmount);
+        }
+        io:println("---------------------------------------");
+        
+
     }
 }
