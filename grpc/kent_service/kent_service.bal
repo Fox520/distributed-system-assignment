@@ -19,7 +19,7 @@ int cg = 0;// count cant get tables
 int cd = 0;// count different dates
 float MINIMUM_DEPOSIT_AMOUNT = 300;
 
-function isAvailable(BookingId bd) returns (boolean?) {
+function isAvailable(BookingId bd) returns (boolean, string) {
 
     int i = bd.bd.duration;
     int hour = i / 3600;
@@ -81,10 +81,12 @@ function isAvailable(BookingId bd) returns (boolean?) {
                     if (b.gotTable.toString().equalsIgnoreCase("no")) {
                         //io:println("Overbook situation....\n forward to deposit function please...");
                         // implement the deposit function
-                        return false;
+                        return (false, "");
                     }
                     else {
                         booking[item].details[booking[item].details.length()] = b;
+                        io:println("got this far");
+                        return (true,b.gotTable.toString());
                     }
                 }
                 cg = 0;
@@ -101,6 +103,7 @@ function isAvailable(BookingId bd) returns (boolean?) {
             };
         }
         cd = 0;
+        return (true,b.gotTable.toString());
     }
     else {
         booking[0] = {
@@ -112,6 +115,7 @@ function isAvailable(BookingId bd) returns (boolean?) {
         b.gotTable = tables[0];
         booking[0].details[0] = b;
         bcount = bcount + 1;
+        return (true,b.gotTable.toString());
     }
 
     //io:println("\n", booking, "\n\n");
@@ -149,14 +153,16 @@ service kent on ep {
         if (a is json) {
             reservation[count - 1] = a;
         }
-        boolean? available = isAvailable(bId);
+        (boolean, string) available = isAvailable(bId);
         BookingResponse br = {
             bookingId: bId,
             conf: {
                 confirmed: true
-            }
+            },
+            tableAssigned: ""
         };
-        if (available is boolean && available == false) {
+        io:println(available[1]);
+        if (available[0] == false) {
             br.conf.confirmed = false;
         }
 
@@ -180,9 +186,9 @@ service kent on ep {
         result = caller->send(c);
         result = caller->complete();
         sortOverbooks();
-        foreach var item in overbooks {
-            io:println(item.depositAmount);
-        }
+        // foreach var item in overbooks {
+        //     io:println(item.depositAmount);
+        // }
         io:println("---------------------------------------");
         
 
