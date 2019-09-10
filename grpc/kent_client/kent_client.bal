@@ -35,7 +35,7 @@ public function secc(any brr, kentBlockingClient ep) {
             if (c is Confirmation) {
                 if (c.confirmed) {
                     io:println("Deposit successful");
-                // what to do after? ����
+                // what to do after? 🤷
                 } else {
                     io:println("Deposit amount ", "{", da, "}", " too low. Minimum is $300");
                 }
