@@ -27,6 +27,7 @@ public function main (string... args) returns(error?) {
 public function secc(any brr, kentBlockingClient ep){
     if(brr is BookingResponse){
         // overbooked, so secure spot with deposit
+        
         // get money to deposit
         float da = <float>math:randomInRange(300, 500);
         Confirmation? | error? c = securePlace(ep, da, brr.bookingId);
