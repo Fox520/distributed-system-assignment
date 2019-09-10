@@ -85,7 +85,7 @@ function isAvailable(BookingId bd) returns (boolean, string) {
                     }
                     else {
                         booking[item].details[booking[item].details.length()] = b;
-                        io:println("got this far");
+                        //io:println("got this far");
                         return (true,b.gotTable.toString());
                     }
                 }
@@ -118,7 +118,7 @@ function isAvailable(BookingId bd) returns (boolean, string) {
         return (true,b.gotTable.toString());
     }
 
-    //io:println("\n", booking, "\n\n");
+    
 
 }
 
@@ -161,7 +161,8 @@ service kent on ep {
             },
             tableAssigned: ""
         };
-        io:println(available[1]);
+        io:println("\n", booking, "\n\n");
+        //io:println(available[1]);
         if (available[0] == false) {
             br.conf.confirmed = false;
         }
@@ -189,7 +190,7 @@ service kent on ep {
         // foreach var item in overbooks {
         //     io:println(item.depositAmount);
         // }
-        io:println("---------------------------------------");
+        io:println("------------Deposit here---------------------------");
         
 
     }
