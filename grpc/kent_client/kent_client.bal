@@ -43,7 +43,7 @@ public function secc(any brr, kentBlockingClient ep) {
                 io:println("Error: ", c.reason(), " - ", c.detail().message, "\n\n");
             }
         }else{
-            io:println("You don't need to pay a deposit.");
+            //io:println("You don't need to pay a deposit.");
         }
 
     }
