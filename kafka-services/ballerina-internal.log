@@ -1,0 +1,28 @@
+[2019-09-11 21:43:25,904] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-11 21:43:25,939] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-11 21:43:26,035] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-11 21:43:26,039] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-11 21:43:26,633] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=arrival] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-12 09:40:30,898] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 09:40:30,942] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 09:40:31,115] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 09:40:31,117] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 09:40:32,003] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=arrival] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-12 09:40:32,057] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=arrival] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-12 10:14:53,458] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 10:14:53,550] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 10:14:54,120] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 10:14:54,131] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 10:14:55,043] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=arrival] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-12 10:14:55,096] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=arrival] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-12 12:16:37,116] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 12:16:37,172] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 12:16:37,309] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 12:16:37,316] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 12:16:38,853] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-12 12:16:39,016] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-12 12:37:12,796] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 12:37:12,840] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 12:37:12,919] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-12 12:37:12,934] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-12 12:37:13,430] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  

@@ -2,6 +2,10 @@ import wso2/kafka;
 import ballerina/encoding;
 import ballerina/io;
 
+
+// recieve booking json via http
+
+
 // Kafka consumer listener configurations
 kafka:ConsumerConfig tableConfig = {
     bootstrapServers: "localhost:9092, localhost:9093",
@@ -11,7 +15,7 @@ kafka:ConsumerConfig tableConfig = {
     pollingInterval: 1000
 };
 
-// fixed number of tables
+// fixed number of tables (remove this later, maybe)
 map<json>[] tables = [
                     {"T1":{"state":"free", "guestReferenceNum":""}},
                     {"T2":{"state":"free", "guestReferenceNum":""}},
