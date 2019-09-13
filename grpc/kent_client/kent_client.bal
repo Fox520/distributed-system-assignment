@@ -1,7 +1,9 @@
 import ballerina/grpc;
 import ballerina/io;
 import ballerina/math;
+import ballerina/http;
 
+BookingResponse[] bInfo = [];
 
 public function main(string... args) returns( error?) {
 
@@ -22,6 +24,23 @@ public function main(string... args) returns( error?) {
     secc(isConfirmed5, blockingEp);
     secc(isConfirmed6, blockingEp);
     secc(isConfirmed7, blockingEp);
+
+
+    io:println(findBooking("b57"));
+}
+
+// finds the booking inforamtion according to the id
+public function findBooking(string bId) returns json{
+    foreach var item in bInfo{
+        if(item.bookingId.bookingId.equalsIgnoreCase(bId)){
+            //io:println("\n\nItem: ",item.bookingId);
+            json|error data = json.convert(item.bookingId);
+            if(data is json){
+                return data;
+            }            
+        }
+    }
+    return {"Message": "Booking info not found!"};
 }
 
 public function secc(any brr, kentBlockingClient ep) {
@@ -105,6 +124,44 @@ public function reservation(kentBlockingClient ep, int day, int month, int year,
         grpc:Headers resHeaders;
         (br, resHeaders) = res;
         io:println("Response: ", br, "\n");
+        if(bInfo.length() >= 1){
+            bInfo[bInfo.length()] = br;
+        }
+        else{
+            bInfo[0] = br;
+        }
         return br;
     }
+}
+
+
+// create a service that sends the booking information
+
+service getBooking on new http:Listener(5000){
+    @http:ResourceConfig {
+        methods: ["POST"],
+        consumes: ["application/json"],
+        produces: ["application/json"],
+        path: "/getB"
+    }
+    resource function getBookingInfo(http:Caller caller, http:Request request){
+        http:Response response = new;
+        json|error reqPayload = request.getJsonPayload();
+
+        if(reqPayload is error){
+            // SOMWTHING WRONG
+        }
+        else{
+            json id = reqPayload.bId;
+            if(id == null){
+                // BAD REQUEST
+            }
+            else{
+                response.setJsonPayload(findBooking(id.toString()));
+                var res = caller->respond(response);
+            }
+        }
+
+    }
+
 }

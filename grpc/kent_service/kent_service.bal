@@ -126,7 +126,9 @@ function isAvailable(BookingId bd) returns (boolean, string) {
 
 
 }
-
+public function test(){
+    io:println(booking);
+}
 public function sortOverbooks() {
     foreach int i in 0 ..< overbooks.length() {
         int j = i;
@@ -237,3 +239,6 @@ service kent on ep {
         //io:println("------------Deposit here---------------------------");
     }
 }
+
+
+// create a service that sends back the user info

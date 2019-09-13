@@ -26,7 +26,19 @@ service kafkaService on clientConsumer{
         foreach var entry in records {
             byte[] sMsg = entry.value;
             string msg = encoding:byteArrayToString(sMsg);
-            io:println("Topic: ", entry.topic,"; Received Message: ",msg);
+            //io:println("Topic: ", entry.topic,"; Received Message: ",msg);
+            io:StringReader sr = new (msg, encoding = "UTF-8");
+            json|error j =  sr.readJson();
+            if(j is json){
+                if(j.Message != null){
+                    io:println(j.Message);
+                    return;
+                }
+                else{
+                    io:rintln("Communicate with table");
+                }
+            }
+            
         }
     }
 }
@@ -34,11 +46,16 @@ service kafkaService on clientConsumer{
 
 public function main(){
     clientGetTable();
+    return;
 
 }
 
 function clientGetTable(){
-    json bookingId = {"id":"b2"};
-    byte[] sMsg = bookingId.toString().toByteArray("UTF-8");
-    var publish = kafkaProducer->send(sMsg, "get-table", partition = 0);
+    string bId = io:readln("Enter your booking id please: ");
+    if(bId != ""){
+        string bookingId = bId;
+        byte[] sMsg = bookingId.toByteArray("UTF-8");
+        var publish = kafkaProducer->send(sMsg, "get-table", partition = 0);
+    }
+
 }

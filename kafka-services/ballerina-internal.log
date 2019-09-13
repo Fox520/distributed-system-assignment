@@ -26,3 +26,525 @@
 [2019-09-12 12:37:12,919] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
 [2019-09-12 12:37:12,934] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
 [2019-09-12 12:37:13,430] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:04,057] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 22:59:04,104] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 22:59:04,171] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 22:59:04,185] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 22:59:05,246] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,310] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,331] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,372] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,391] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,433] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,444] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,499] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,550] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,658] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,721] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:05,765] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:06,085] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:06,131] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:06,142] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:06,758] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:06,900] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:06,923] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:07,842] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:07,851] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:08,025] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:08,721] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:08,781] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:09,163] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:09,908] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:09,920] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:10,178] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:10,733] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:11,039] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:11,044] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:11,700] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:11,958] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:12,111] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:12,573] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:13,023] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:13,083] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:13,443] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:14,140] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:14,305] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:14,461] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:15,101] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:15,425] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:15,432] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:16,168] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:16,352] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:16,609] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:17,325] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:17,340] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:17,781] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:18,294] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:18,300] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:18,656] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:19,163] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:19,225] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:19,630] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:20,241] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:20,275] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:20,606] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:21,268] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:21,388] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:21,623] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:22,238] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:22,555] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:22,751] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:23,221] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:23,567] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:23,829] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:24,136] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:24,426] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:24,647] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:25,103] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:25,340] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:25,811] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:26,067] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:26,455] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:26,727] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:26,931] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:27,462] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:27,689] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:28,146] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:28,319] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:28,752] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:29,007] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:29,227] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:29,973] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:30,089] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:30,227] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:31,042] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:31,052] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:31,149] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:32,106] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:32,210] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:32,212] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:33,020] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:33,073] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:33,376] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:34,133] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:34,247] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:34,502] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:35,147] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:35,410] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:35,462] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:36,054] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:36,571] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:36,624] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:37,164] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:37,431] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:37,483] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:38,175] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:38,391] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:38,594] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:39,335] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:39,503] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:39,555] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:40,344] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:40,514] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:40,566] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:41,209] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:41,476] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:41,528] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:42,275] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:42,438] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:42,492] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:43,241] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:43,551] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:43,556] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:44,301] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:44,466] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:44,621] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:45,464] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:45,481] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:45,684] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:46,342] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:46,524] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:46,848] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:47,382] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:47,506] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:47,709] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:48,448] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:48,518] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:48,822] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:49,457] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:49,680] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:49,836] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:50,600] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:50,619] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:51,061] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:51,526] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:51,821] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:52,028] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:52,487] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:52,988] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:53,096] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:53,445] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:53,853] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:54,106] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:54,555] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:54,712] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:55,267] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:55,567] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:55,773] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:56,279] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:56,777] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:56,939] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:57,394] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:57,634] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:57,899] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:58,454] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:58,601] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:58,911] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:59,269] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 22:59:59,610] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 22:59:59,736] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:00,291] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:00,720] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:00,849] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:01,455] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:01,581] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:01,710] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:02,421] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:02,542] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:02,778] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:03,488] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:03,555] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:03,642] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:04,402] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:04,464] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:04,607] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:05,374] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:05,619] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:05,723] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:06,237] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:06,532] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:06,739] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:07,403] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:07,449] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:07,704] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:21,539] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:00:21,629] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:00:21,759] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:00:21,765] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:00:22,853] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:22,889] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:22,919] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:22,992] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,007] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,052] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,104] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,116] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,216] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,220] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,375] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,487] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,735] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,845] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:23,947] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:24,570] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:24,630] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:24,864] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:25,399] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:25,807] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:25,938] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:26,367] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:26,951] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:26,979] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:27,335] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:27,846] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:28,120] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:28,209] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:28,875] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:29,298] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:29,383] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:29,997] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:30,514] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:30,614] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:31,171] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:31,440] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:31,783] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:32,341] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:32,407] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:33,004] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:33,318] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:33,516] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:34,226] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:34,485] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:34,533] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:35,399] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:35,497] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:35,568] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:36,228] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:36,608] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:36,643] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:37,457] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:37,674] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:37,715] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:38,573] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:38,835] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:38,938] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:39,614] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:39,768] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:39,946] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:40,679] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:40,731] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:40,817] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:41,538] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:41,844] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:41,983] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:42,703] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:43,058] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:43,150] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:43,868] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:43,922] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:44,161] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:44,834] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:45,042] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:45,075] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:45,853] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:45,934] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:46,007] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:46,774] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:46,892] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:47,029] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:47,738] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:48,004] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:48,145] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:48,912] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:48,914] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:49,367] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:49,775] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:49,775] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:50,483] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:50,738] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:50,890] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:51,346] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:51,652] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:51,755] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:52,362] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:52,767] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:52,863] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:53,577] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:53,934] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:54,076] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:54,388] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:54,894] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:54,943] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:55,300] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:55,909] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:56,155] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:56,315] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:57,125] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:57,164] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:57,232] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:58,044] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:58,098] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:58,325] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:59,007] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:00:59,214] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:00:59,489] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:00,025] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:00,228] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:00,603] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:01,237] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:01,390] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:01,711] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:02,348] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:02,502] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:02,621] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:03,363] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:03,520] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:03,632] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:04,284] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:04,388] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:04,791] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:05,244] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:05,498] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:05,849] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:06,407] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:06,510] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:07,060] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:07,418] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:07,624] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:08,227] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:08,237] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:08,694] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:09,088] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:09,253] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:09,508] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:01:10,257] WARN  {org.apache.kafka.clients.NetworkClient} - [Producer clientId=client-producer] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:01:10,320] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -1 could not be established. Broker may not be available.  
+[2019-09-13 23:09:07,070] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:09:07,199] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:09:07,412] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:09:07,442] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:09:08,395] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:09:08,452] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:11:25,529] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:11:25,549] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:11:25,624] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:11:25,626] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:11:26,199] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:12:28,937] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:12:28,965] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:12:29,019] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:12:29,025] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:12:29,493] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:15:24,740] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:15:24,758] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:15:24,846] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:15:24,848] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:15:25,330] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:15:25,397] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:17:02,280] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:17:02,311] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:17:02,384] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:17:02,390] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:17:02,852] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:34:11,930] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:34:11,955] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:34:12,023] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:34:12,029] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:34:12,590] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:40:30,040] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:40:30,082] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:40:30,202] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:40:30,209] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:40:31,345] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:40:31,391] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:44:05,415] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:44:05,444] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:44:05,516] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:44:05,522] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:44:06,301] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:46:53,983] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:46:54,104] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:46:54,196] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:46:54,210] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:46:55,294] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:48:39,313] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:48:39,334] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:48:39,383] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:48:39,385] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:48:39,811] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:49:53,015] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:49:53,064] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:49:53,217] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:49:53,226] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:49:54,096] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:52:16,240] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:52:16,262] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:52:16,320] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:52:16,328] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:52:16,799] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:52:16,840] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:52:31,234] WARN  {org.wso2.transport.http.netty.contractimpl.sender.TargetHandler} - Exception occurred in TargetHandler : unrecognized token 'no' at line: 1 column: 4  
+[2019-09-13 23:52:31,256] WARN  {org.wso2.transport.http.netty.contractimpl.common.states.StateUtil} - Remote host closed the connection while reading inbound response body  
+[2019-09-13 23:53:15,233] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:53:15,256] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:53:15,336] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:53:15,347] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:53:15,804] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:53:15,859] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:56:00,888] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:56:00,917] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:56:00,991] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-13 23:56:00,997] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-13 23:56:01,449] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-13 23:56:01,513] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:35:45,191] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:35:45,255] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:35:45,331] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:35:45,337] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:35:45,783] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:35:45,835] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:38:28,039] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:38:28,076] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:38:28,170] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:38:28,172] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:38:28,635] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:38:28,692] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:41:27,974] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:41:27,997] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:41:28,092] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:41:28,101] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:41:29,464] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:43:20,415] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:43:20,436] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:43:20,506] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:43:20,508] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:43:20,929] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:45:57,024] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:45:57,044] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:45:57,140] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:45:57,147] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:45:57,743] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:53:03,990] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:53:04,018] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:53:04,082] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:53:04,087] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:53:04,519] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:57:07,818] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:57:07,839] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:57:07,909] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:57:07,911] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:57:08,403] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 00:59:16,959] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:59:16,981] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:59:17,040] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 00:59:17,048] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 00:59:17,515] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:00:27,960] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:00:27,986] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:00:28,055] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:00:28,062] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:00:28,536] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:00:28,607] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:02:27,886] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:02:27,913] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:02:27,965] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:02:27,967] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:02:28,420] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:03:26,076] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:03:26,115] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:03:26,226] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:03:26,231] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:03:27,031] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:04:22,585] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:04:22,637] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:04:22,727] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:04:22,742] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:04:23,742] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:04:23,875] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=welcome] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:07:55,197] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:07:55,229] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:07:55,305] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:07:55,315] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:07:55,843] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:07:55,914] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:20:12,959] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:20:12,980] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:20:13,038] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:20:13,046] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:20:13,532] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:21:03,530] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:21:03,552] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:21:03,624] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:21:03,626] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:21:04,092] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:23:07,782] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:23:07,803] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:23:07,848] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:23:07,850] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:23:08,347] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:24:00,138] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:24:00,162] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:24:00,234] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'topics' was supplied but isn't a known config.  
+[2019-09-14 01:24:00,236] WARN  {org.apache.kafka.clients.consumer.ConsumerConfig} - The configuration 'pollingInterval' was supplied but isn't a known config.  
+[2019-09-14 01:24:00,673] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  
+[2019-09-14 01:24:00,724] WARN  {org.apache.kafka.clients.NetworkClient} - [Consumer clientId=consumer-2, groupId=client] Connection to node -2 could not be established. Broker may not be available.  

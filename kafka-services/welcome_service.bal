@@ -3,7 +3,9 @@
 import wso2/kafka;
 import ballerina/encoding;
 import ballerina/io;
-
+import ballerina/http;
+import ballerina/mime;
+import ballerina/log;
 json booking = [];
 
 // welcome consumer
@@ -24,33 +26,57 @@ kafka:ProducerConfig producerConfigs = {
 kafka:SimpleProducer kafkaProducer = new(producerConfigs);
 
 
-public function foundTable(){
-    json gotTable = {"confirmation": true};
+public function foundTable(json data){
+    json gotTable = data;
     byte[] sMsg = gotTable.toString().toByteArray("UTF-8");
 
     var send = kafkaProducer->send(sMsg, "found-table", partition = 0);
 }
 
-// listener http:Listener htt = new(4000);
-// @http
-// service welcomeService on http:Listenter(4000){
-//     resource function getData(http:Caller caller, http:Request req){
-//         json|error rePayload = request.getJsonPayload();
-//     }
-// }
+function getBaseType(string contentType) returns string {
+    var result = mime:getMediaType(contentType);
+    if (result is mime:MediaType) {
+        return result.getBaseType();
+    } else {
+        panic result;
+    }
+}
 
 listener kafka:SimpleConsumer welcomeConsumer = new(consumerConfig);
 service kafkaService on welcomeConsumer {
     resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records){
         foreach var entry in records {
             byte[] sMsg = entry.value;
-            string msg = encoding:byteArrayToString(sMsg);
+            json msg = encoding:byteArrayToString(sMsg);
             // send a message follow me to the table
-            io:println("Topic: ", entry.topic,"; Received Message");
+            io:println("Topic: ", entry.topic,"; Received Message: ",msg);
+            http:Client clientEp = new ("http://localhost:5000/getBooking");
+            var res = clientEp->post("/getB",{bId: msg});
+            json data = handleRequest(res);
             // find the table
-            foundTable();
+            foundTable(data);
+            
+
+            
+            
+
         }
     }
 
+}
 
+public function handleRequest(http:Response|error res) returns json{
+    if(res is http:Response){
+        if (res.hasHeader("content-type")) {
+            string baseType = getBaseType(res.getContentType());
+            if (mime:APPLICATION_JSON == baseType) {
+                var payload = res.getJsonPayload();
+                if (payload is json) {
+                    return payload;
+                } else {
+                    log:printError("Error in parsing json data", err = payload);
+                }
+            }                 
+        }
+    }
 }
