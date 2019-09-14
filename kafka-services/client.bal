@@ -38,7 +38,7 @@ service kafkaService on clientConsumer{
                     io:StringReader sr = new (msg, encoding = "UTF-8");
                     json|error j =  sr.readJson();
                     if(j is json){
-                        if(j.Message != null){
+                        if(j.Message != null && j.unique_string == myUniqueMsgId){
                             io:println(j.Message);
                             return;
                         }
@@ -51,6 +51,9 @@ service kafkaService on clientConsumer{
                 "get-menu" => {
                     io:println("\n",msg,"\n");
                     tableHandler();
+                }
+                "order-delivery" => {
+                    // waiter should send this
                 }
             }
             
@@ -70,7 +73,8 @@ function clientGetTable(){
     string bId = io:readln("Enter your booking id please: ");
     if(bId != ""){
         string bookingId = bId;
-        clientPublisher("get-table",bookingId);
+        json msgOut = {"bid":bookingId, "unique_string":myUniqueMsgId};
+        clientPublisher("get-table",msgOut.toString());
     }
 
 }
@@ -84,12 +88,13 @@ function tableHandler(){
         var option = io:readln("Option: ");
         match(option){
             "1" => {
-                clientPublisher("request-menu","");
+                clientPublisher("request-menu",myUniqueMsgId);
             }
             "2" => {
                 io:println("Order templete: itemName quantity, itemName quantity....");
                 string orderMsg = io:readln("What will you order:\n");
-                clientPublisher("create-order",orderMsg);
+                json msgOut = {"unique_id":myUniqueMsgId, "the_order": orderMsg};
+                clientPublisher("create-order",msgOut.toString());
                 io:println("Your order is being processed....");
             }
         }
