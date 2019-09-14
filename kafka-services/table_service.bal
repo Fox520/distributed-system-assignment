@@ -54,7 +54,10 @@ service tableService on table_consumer{
                     doPayment(msg);
                 }
                 "request-menu" => {
-                    requestMenu();
+                    requestMenu(msg);
+                }
+                _ => {
+                    io:println("No handler found for topic: "+ entry.topic);
                 }
             }
         }
@@ -100,9 +103,10 @@ function doPayment(string msg){
 
 }
 
-function requestMenu(){
+function requestMenu(string uniq){
     // TODO: modify display on client side
-    clientPublisher("get-menu",menu.toString());
+    json msgOut = {"unique_id": uniq, "the_menu": menu.toString()};
+    clientPublisher("get-menu",msgOut.toString());
 
 }
 
