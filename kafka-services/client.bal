@@ -76,7 +76,7 @@ service kafkaService on clientConsumer{
                     if(j is json && j["unique_string"] == myUniqueMsgId){
                         io:println("Your orders were:");
                         io:println(j["ordered_items"]);
-                        io:println("Total: "+ j["ordered_items"].toString());
+                        io:println("Total: "+ j["totalCost"].toString());
                     }
                 }
                 _ => {
