@@ -25,11 +25,12 @@ kafka:ConsumerConfig tableConfig = {
     pollingInterval: 1000
 };
 
+// to store log of ordered by guests (if time allows)
+map<json>[] ordersForGuests = [];
 // fixed number of tables (remove this later, maybe)
-map<json>[] tables = [
-                    {"T1":{"state":"free", "guestReferenceNum":""}},
-                    {"T2":{"state":"free", "guestReferenceNum":""}},
-                    {"T3":{"state":"free", "guestReferenceNum":""}}];
+map<json> tables = {"T1":"",
+                    "T2":"",
+                    "T3":""};
 
 // Create kafka listener
 listener kafka:SimpleConsumer table_consumer = new(tableConfig);
@@ -39,7 +40,7 @@ service tableService on table_consumer{
         foreach var entry in records {
             byte[] serializedMsg = entry.value;
             string msg = encoding:byteArrayToString(serializedMsg, encoding = "utf-8");
-            io:println("Topic: "+entry.topic +"; Received Message: "+ msg);
+            //io:println("Topic: "+entry.topic +"; Received Message: "+ msg);
             match(entry.topic){
                 "create-order" => {
                     error? variable = createOrder(msg);
@@ -74,6 +75,7 @@ function createOrder(string msg) returns error?{
         // split comma; then split space
         float totalCost = 0;
         string[] itemsToOrder = the_order.split(",");
+        io:println(j);
         foreach string itemAmount in itemsToOrder {
             string[] kv = itemAmount.split(" ");
             string itemName = kv[0];
@@ -81,12 +83,13 @@ function createOrder(string msg) returns error?{
             // one-liner 😎
             totalCost += check float.convert(menu[itemName]) * itemQuantity;
         }
-        json msgOut = {"total_cost": totalCost, "unique_string": the_order};
+        log:printInfo("TotalCostTable: "+totalCost);
+        json msgOut = {"total_cost": totalCost, "unique_string": unique_str};
         clientPublisherTable("take-delivery", msgOut.toString());
     }else{
         log:printError("CreateOrder Error", err = j);
     }
-    io:println("What was ordered");
+    //io:println("What was ordered");
     // send to the kitchen service and then from kitchen send to the client
 
 }
@@ -105,8 +108,8 @@ function doPayment(string msg){
 
 function requestMenu(string uniq){
     // TODO: modify display on client side
-    json msgOut = {"unique_id": uniq, "the_menu": menu.toString()};
-    clientPublisher("get-menu",msgOut.toString());
+    json msgOut = {"unique_string": uniq, "the_menu": menu.toString()};
+    clientPublisherTable("get-menu",msgOut.toString());
 
 }
 
