@@ -24,7 +24,7 @@ kafka:ProducerConfig producerConfigsWelcome = {
     noRetries: 3
 };
 kafka:SimpleProducer kafkaProducerWelcome = new(producerConfigsWelcome);
-http:Client tableHTTPEP = new("http://localhost:8080/table-manager");
+http:Client tableHTTPEP = new("http://localhost:8080/");
 
 public function foundTable(string uniq, string tbl=""){
     string mg = (tbl == "")?"didn't find your table":"Follow me to table "+tbl;
@@ -57,16 +57,11 @@ service kafkaServiceWelcome on welcomeConsumer {
             string supplied_booking_id = msg["bid"].toString();
             // get booking info from grpc service and publish to table or simply update the variable
             // password to protect access to data from unauthorised actors
-            res.setJsonPayload({"password": "my password"}, contentType = "application/json");
+            res.setJsonPayload({"password": "my_password"}, contentType = "application/json");
             //send a request and check response 
-            io:println("sedning");
+            // io:println("sedning");
             http:Response response = checkpanic tableHTTPEP->post("/getBooking", res);
-            io:println("got response");
-            io:println(checkpanic response.getTextPayload());
             json data = checkpanic response.getJsonPayload();  //handleRequest(response);
-            
-            //booking = untaint data;
-            // io:println(data);
             foreach var item in <json[]>data {
                 if(item["date"].toString() == booking_date){
                     // find table from the details
