@@ -27,7 +27,7 @@ kafka:SimpleProducer kafkaProducerWelcome = new(producerConfigsWelcome);
 http:Client tableHTTPEP = new("http://localhost:9090/table-manager");
 
 public function foundTable(json data, string uniq){
-    json gotTable = {"the_data":data, "unique_string": uniq};
+    json gotTable = {"Message":"Follow me to the table please.", "unique_string": uniq};
     byte[] sMsg = gotTable.toString().toByteArray("UTF-8");
 
     var send = kafkaProducerWelcome->send(sMsg, "found-table", partition = 0);
@@ -53,10 +53,12 @@ service kafkaServiceWelcome on welcomeConsumer {
             // send a message follow me to the table
             io:println("Topic: ", entry.topic,"; Received Message: ",msg);
             // get booking info from grpc service and publish to table or simply update the variable
-            res.setJsonPayload({bId: bb}, contentType = "application/json");
+            // password to protect data from unauthorised actors
+            res.setJsonPayload({"password": "my password"}, contentType = "application/json");
             //send a request and check response 
             var response = tableHTTPEP->post("/getBooking", res);
             json data = handleRequest(response);
+            booking = untaint data;
             // find the table
             foundTable(data, msg["unique_id"].toString());
             
