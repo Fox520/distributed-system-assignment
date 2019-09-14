@@ -21,11 +21,11 @@ kafka:SimpleProducer kafkaProducer = new(producerConfigs);
 kafka:ConsumerConfig consumerConfig = {
     bootstrapServers: "localhost:9092, localhost:9093",
     groupId: "client",
-    topics: ["found-table", "get-menu"],
+    topics: ["found-table", "get-menu", "order-delivery"],
     pollingInterval: 1000
 };
 
-string myUniqueMsgId="";
+string myUniqueMsgId = "";
 
 listener kafka:SimpleConsumer clientConsumer = new(consumerConfig);
 service kafkaService on clientConsumer{
@@ -39,13 +39,13 @@ service kafkaService on clientConsumer{
                     io:StringReader sr = new (msg, encoding = "UTF-8");
                     json|error j =  sr.readJson();
                     if(j is json){
-                        if(j.the_data.Message != null && j.unique_string == myUniqueMsgId){
-                            io:println(j.the_data.Message); // follow me to table or here's your table
+                        if(j.unique_string == myUniqueMsgId && j.Message != null){
+                            io:println(j.Message); // follow me to table or here's your table
                             return;
                         }
                         else{
                             io:println("Communicate with table");
-                            tableHandler();
+                            // tableHandler();  comment out maybe?
                         }
                     }
                 }
