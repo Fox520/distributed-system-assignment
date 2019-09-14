@@ -24,12 +24,12 @@ kafka:ProducerConfig producerConfigsWelcome = {
     noRetries: 3
 };
 kafka:SimpleProducer kafkaProducerWelcome = new(producerConfigsWelcome);
-http:Client tableHTTPEP = new("http://localhost:9090/table-manager");
+http:Client tableHTTPEP = new("http://localhost:8080/table-manager");
 
-public function foundTable(json data, string uniq){
-    json gotTable = {"Message":"Follow me to the table please.", "unique_string": uniq};
+public function foundTable(string uniq, string tbl=""){
+    string mg = (tbl == "")?"didn't find your table":"Follow me to table "+tbl;
+    json gotTable = {"Message":mg, "unique_string": uniq};
     byte[] sMsg = gotTable.toString().toByteArray("UTF-8");
-
     var send = kafkaProducerWelcome->send(sMsg, "found-table", partition = 0);
 }
 
@@ -44,29 +44,54 @@ function getBaseType(string contentType) returns string {
 
 listener kafka:SimpleConsumer welcomeConsumer = new(consumerConfigWelcome);
 service kafkaServiceWelcome on welcomeConsumer {
-    resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records){
+    resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records) returns error?{
         foreach var entry in records {
             http:Request res = new;
             byte[] sMsg = entry.value;
-            json msg = encoding:byteArrayToString(sMsg);
-            string bb = msg["bid"].toString();
+            string msgStr = encoding:byteArrayToString(sMsg);
+            io:StringReader sr = new (msgStr, encoding = "UTF-8");
+            json msg = check sr.readJson();
             // send a message follow me to the table
-            io:println("Topic: ", entry.topic,"; Received Message: ",msg);
+            io:println("Topic: ", entry.topic,"; Received Message: ",msg["bid"],", ", msg["booking_date"]);
+            string booking_date = msg["booking_date"].toString();
+            string supplied_booking_id = msg["bid"].toString();
             // get booking info from grpc service and publish to table or simply update the variable
-            // password to protect data from unauthorised actors
+            // password to protect access to data from unauthorised actors
             res.setJsonPayload({"password": "my password"}, contentType = "application/json");
             //send a request and check response 
-            var response = tableHTTPEP->post("/getBooking", res);
-            json data = handleRequest(response);
-            booking = untaint data;
-            // find the table
-            foundTable(data, msg["unique_id"].toString());
+            io:println("sedning");
+            http:Response response = checkpanic tableHTTPEP->post("/getBooking", res);
+            io:println("got response");
+            io:println(checkpanic response.getTextPayload());
+            json data = checkpanic response.getJsonPayload();  //handleRequest(response);
             
-
+            //booking = untaint data;
+            // io:println(data);
+            foreach var item in <json[]>data {
+                if(item["date"].toString() == booking_date){
+                    // find table from the details
+                    foreach var dts in <json[]>item["details"] {
+                        if(dts["bookingId"].toString() == supplied_booking_id){
+                            string assignedTable = dts["gotTable"].toString();
+                            // set guest info to assigned table
+                            tables[assignedTable] = supplied_booking_id;
+                            foundTable(msg["unique_string"].toString(), tbl = assignedTable);
+                            io:println("INFO: ",tables);
+                        }
+                    }
+                }else{
+                    io:println(item["date"].toString() +"  != supplied "+booking_date);
+                }
+            }
+            // if got here, likely means above resulted in table not being found
+            foundTable(msg["unique_string"].toString());
+            
         }
     }
 
 }
+//[{"date":"12-2-2019", "details":[{"bookingId":"b1", "fromTime":"1:30", "toTime":"3:30", "gotTable":"T1"}]}]
+
 
 public function handleRequest(http:Response|error res) returns json{
     if(res is http:Response){
