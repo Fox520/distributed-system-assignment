@@ -31,22 +31,26 @@ listener kafka:SimpleConsumer clientConsumer = new(consumerConfig);
 service kafkaService on clientConsumer{
     resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records){
         foreach var entry in records {
+            io:println("Client Topic: ", entry.topic);
             byte[] sMsg = entry.value;
             string msg = encoding:byteArrayToString(sMsg);
             match(entry.topic){
                 "found-table" => {
-                    //io:println("Topic: ", entry.topic,"; Received Message: ",msg);
+                    io:println("[FoundTableInfo] Received Message: ",msg);
                     io:StringReader sr = new (msg, encoding = "UTF-8");
                     json|error j =  sr.readJson();
                     if(j is json){
-                        if(j.unique_string == myUniqueMsgId && j.Message != null){
+                        io:println(j);
+                        if(j["unique_string"].toString() == myUniqueMsgId && j.Message != null){
                             io:println(j.Message); // follow me to table or here's your table
-                            return;
+                            tableHandler();
                         }
                         else{
                             io:println("Communicate with table");
-                            // tableHandler();  comment out maybe?
+                            tableHandler(); // comment out maybe?
                         }
+                    }else{
+                        log:printError("FoundTableError", err=j);
                     }
                 }
                 "get-menu" => {
@@ -64,6 +68,8 @@ service kafkaService on clientConsumer{
                 }
                 "order-delivery" => {
                     // waiter should send this
+                    io:println("order");
+                    io:println(msg);
                 }
                 _ => {
                     io:println("No handler found for topic: "+ entry.topic);
@@ -83,10 +89,11 @@ public function main(){
 }
 
 function clientGetTable(){
-    string bId = io:readln("Enter your booking id please: ");
-    if(bId != ""){
-        string bookingId = bId;
-        json msgOut = {"bid":bookingId, "unique_string":myUniqueMsgId};
+    string bId = "b1";//io:readln("Enter your booking id please: ");
+    // useful when getting table name
+    string bDate = "12-2-2019";//io:readln("Enter your booking date please: ");
+    if(bId != "" && bDate != ""){
+        json msgOut = {"bid":bId, "unique_string":myUniqueMsgId, "booking_date": bDate};
         clientPublisher("get-table",msgOut.toString());
     }
 
