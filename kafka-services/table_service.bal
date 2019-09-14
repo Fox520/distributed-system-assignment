@@ -7,13 +7,13 @@ import ballerina/io;
 string menu = "Coke - 5.2\nFood - 9";
 
 // table producer
-kafka:ProducerConfig producerConfigs = {
+kafka:ProducerConfig producerConfigsTable = {
     bootstrapServers: "localhost:9092",
     clientID: "table-producer",
     acks: "all",
     noRetries: 3
 };
-kafka:SimpleProducer kafkaProducer = new(producerConfigs);
+kafka:SimpleProducer kafkaProducerTable = new(producerConfigsTable);
 
 // Kafka consumer listener configurations
 kafka:ConsumerConfig tableConfig = {

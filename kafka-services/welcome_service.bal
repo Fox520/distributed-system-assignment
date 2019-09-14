@@ -9,7 +9,7 @@ import ballerina/log;
 json booking = [];
 
 // welcome consumer
-kafka:ConsumerConfig consumerConfig = {
+kafka:ConsumerConfig consumerConfigWelcome = {
     bootstrapServers: "localhost:9092, localhost:9093",
     groupId: "welcome",
     topics: ["get-table"],
@@ -17,13 +17,13 @@ kafka:ConsumerConfig consumerConfig = {
 };
 
 // welcome producer
-kafka:ProducerConfig producerConfigs = {
+kafka:ProducerConfig producerConfigsWelcome = {
     bootstrapServers: "localhost:9092",
     clientID: "welcome-producer",
     acks: "all",
     noRetries: 3
 };
-kafka:SimpleProducer kafkaProducer = new(producerConfigs);
+kafka:SimpleProducer kafkaProducerWelcome = new(producerConfigsWelcome);
 
 
 public function foundTable(json data){
@@ -43,7 +43,7 @@ function getBaseType(string contentType) returns string {
 }
 
 listener kafka:SimpleConsumer welcomeConsumer = new(consumerConfig);
-service kafkaService on welcomeConsumer {
+service kafkaServiceWelcome on welcomeConsumer {
     resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records){
         foreach var entry in records {
             byte[] sMsg = entry.value;
