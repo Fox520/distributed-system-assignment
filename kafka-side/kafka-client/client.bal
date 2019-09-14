@@ -99,9 +99,9 @@ public function main() {
 }
 
 function clientGetTable() {
-    localbId = "b4";    //io:readln("Enter your booking id please: ");
+    localbId = io:readln("Enter your booking id please: ");
     // useful when getting table name
-    string bDate = "12-2-2019";    //io:readln("Enter your booking date please: ");
+    string bDate = io:readln("Enter your booking date please: ");
     if (localbId != "" && bDate != "") {
         json msgOut = {
             "bid": localbId,
