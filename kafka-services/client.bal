@@ -1,9 +1,12 @@
 // 1 - client service puslibshes the get-table message
 // 2 - client service subscribes to the found-table
-
+// Note: Client should include a unique string along with msgs sent
+//       since kafka will publish to all clients. Strring will be used to 
+//       check if message is ours. (used in the background, not visible to client)
 import wso2/kafka;
 import ballerina/encoding;
 import ballerina/io;
+import ballerina/system;
 
 // client producer
 kafka:ProducerConfig producerConfigs = {
@@ -20,6 +23,9 @@ kafka:ConsumerConfig consumerConfig = {
     topics: ["found-table", "get-menu"],
     pollingInterval: 1000
 };
+
+string myUniqueMsgId="";
+
 listener kafka:SimpleConsumer clientConsumer = new(consumerConfig);
 service kafkaService on clientConsumer{
     resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records){
@@ -54,6 +60,7 @@ service kafkaService on clientConsumer{
 
 
 public function main(){
+    myUniqueMsgId = system:uuid();
     clientGetTable();
     return;
 
