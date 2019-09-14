@@ -26,7 +26,8 @@ kafka:ConsumerConfig tableConfig = {
 };
 
 // to store log of ordered by guests (if time allows)
-map<json>[] ordersForGuests = [];
+map<json> ordersForGuests = {}; // bookId:totalCost
+map<json> itemOrdersForGuests = {};
 // fixed number of tables (remove this later, maybe)
 map<json> tables = {"T1":"",
                     "T2":"",
@@ -36,20 +37,20 @@ map<json> tables = {"T1":"",
 listener kafka:SimpleConsumer table_consumer = new(tableConfig);
 
 service tableService on table_consumer{
-    resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records) {
+    resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records) returns error?{
         foreach var entry in records {
             byte[] serializedMsg = entry.value;
             string msg = encoding:byteArrayToString(serializedMsg, encoding = "utf-8");
             //io:println("Topic: "+entry.topic +"; Received Message: "+ msg);
             match(entry.topic){
                 "create-order" => {
-                    error? variable = createOrder(msg);
+                    check createOrder(msg);
                 }
                 "leave-table" => {
                     removeGuestsFromTable(msg);
                 }
                 "request-bill" => {
-                    requestBill(msg);
+                    check requestBill(msg);
                 }
                 "do-payment" => {
                     doPayment(msg);
@@ -69,13 +70,14 @@ function createOrder(string msg) returns error?{
     io:StringReader sr = new (msg, encoding = "UTF-8");
     json|error j =  sr.readJson();
     if(j is json){
+        // io:println(j);
         string unique_str = j["unique_string"].toString();
         string the_order = j["the_order"].toString();
-        // itemName quantity, itemName quantity....
+        string bkId = j["bId"].toString();
+        // itemName quantity,[no-space]itemName quantity....
         // split comma; then split space
         float totalCost = 0;
         string[] itemsToOrder = the_order.split(",");
-        io:println(j);
         foreach string itemAmount in itemsToOrder {
             string[] kv = itemAmount.split(" ");
             string itemName = kv[0];
@@ -83,27 +85,42 @@ function createOrder(string msg) returns error?{
             // one-liner 😎
             totalCost += check float.convert(menu[itemName]) * itemQuantity;
         }
-        log:printInfo("TotalCostTable: "+totalCost);
+        int|error currentValue = int.convert(ordersForGuests[bkId]);
+        ordersForGuests[bkId] = (currentValue is int)?currentValue + totalCost: totalCost;
+        string|error currentLog = string.convert(itemOrdersForGuests[bkId].toString());
+        if(currentLog is string){
+            if(currentLog == "null"){
+                itemOrdersForGuests[bkId] = the_order;
+                io:println("is null");
+            }else{
+                itemOrdersForGuests[bkId] = currentLog + ", "+the_order;
+            }
+        }
         json msgOut = {"total_cost": totalCost, "unique_string": unique_str};
         clientPublisherTable("take-delivery", msgOut.toString());
     }else{
         log:printError("CreateOrder Error", err = j);
     }
-    //io:println("What was ordered");
-    // send to the kitchen service and then from kitchen send to the client
-
 }
 
 function removeGuestsFromTable(string msg){
 
 }
 
-function requestBill(string msg){
-
+function requestBill(string msg) returns error?{
+    io:StringReader sr = new (msg, encoding = "UTF-8");
+    json j =  check sr.readJson();
+    json msgOut = {
+                    "unique_string": j["unique_string"].toString(),
+                    "totalCost": ordersForGuests[j["booking_id"].toString()].toString(),
+                    "ordered_items": itemOrdersForGuests[j["booking_id"].toString()].toString()
+                    };
+    clientPublisherTable("get-bill", msgOut.toString());
+    
 }
 
 function doPayment(string msg){
-
+    // Note: helper function getCost
 }
 
 function requestMenu(string uniq){
@@ -113,22 +130,12 @@ function requestMenu(string uniq){
 
 }
 
-function getTableIndex(string str) returns int{
-    match(str){
-       "T1" => return 0;
-       "T2" => return 1;
-       "T3" => return 2;
-       _ => return -1;
+function getCost(string bkid) returns float{
+    float|error theTotal = float.convert(ordersForGuests[bkid].toString());
+    if(theTotal is float){
+        return theTotal;
     }
-}
-
-function getTableNameFromIndex(int i) returns string{
-    match(i){
-       0 => return "T1";
-       1 => return "T2";
-       2 => return "T3";
-       _ => return "";
-    }
+    return 0;
 }
 
 function clientPublisherTable(string topic, string msg){

@@ -29,11 +29,11 @@ service waiterService on waiter_consumer{
         foreach var entry in records {
             byte[] serializedMsg = entry.value;
             string msg = encoding:byteArrayToString(serializedMsg, encoding = "utf-8");
-            io:println("Topic: "+entry.topic +"; Received Message: "+ msg);
+            // io:println("Topic: "+entry.topic +"; Received Message: "+ msg);
             match(entry.topic){
                 "take-delivery" => {
                     clientPublisherWaiter("order-delivery", msg);
-                    log:printInfo("Sent order: "+msg);
+                    // log:printInfo("Sent order: "+msg);
                 }
             }
         }

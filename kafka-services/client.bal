@@ -21,33 +21,33 @@ kafka:SimpleProducer kafkaProducer = new(producerConfigs);
 kafka:ConsumerConfig consumerConfig = {
     bootstrapServers: "localhost:9092, localhost:9093",
     groupId: "client",
-    topics: ["found-table", "get-menu", "order-delivery"],
+    topics: ["found-table", "get-menu", "order-delivery", "get-bill"],
     pollingInterval: 1000
 };
 
 string myUniqueMsgId = "";
+// local reference of booking id
+string localbId = "";
 
 listener kafka:SimpleConsumer clientConsumer = new(consumerConfig);
 service kafkaService on clientConsumer{
     resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records){
         foreach var entry in records {
-            io:println("Client Topic: ", entry.topic);
             byte[] sMsg = entry.value;
             string msg = encoding:byteArrayToString(sMsg);
             match(entry.topic){
                 "found-table" => {
-                    io:println("[FoundTableInfo] Received Message: ",msg);
+                    // io:println("[FoundTableInfo] Received Message: ",msg);
                     io:StringReader sr = new (msg, encoding = "UTF-8");
                     json|error j =  sr.readJson();
                     if(j is json){
-                        io:println(j);
+                        if(j["Message"].toString() == "didn't find your table"){
+                            io:println("Couldn't find your table. Please make sure it's your booking date");
+                            break;
+                        }
                         if(j["unique_string"].toString() == myUniqueMsgId && j.Message != null){
                             io:println(j.Message); // follow me to table or here's your table
                             tableHandler();
-                        }
-                        else{
-                            io:println("Communicate with table");
-                            tableHandler(); // comment out maybe?
                         }
                     }else{
                         log:printError("FoundTableError", err=j);
@@ -68,8 +68,16 @@ service kafkaService on clientConsumer{
                 }
                 "order-delivery" => {
                     // waiter should send this
-                    io:println("order");
                     io:println(msg);
+                }
+                "get-bill" => {
+                    io:StringReader sr = new (msg, encoding = "UTF-8");
+                    json|error j =  sr.readJson();
+                    if(j is json && j["unique_string"] == myUniqueMsgId){
+                        io:println("Your orders were:");
+                        io:println(j["ordered_items"]);
+                        io:println("Total: "+ j["ordered_items"].toString());
+                    }
                 }
                 _ => {
                     io:println("No handler found for topic: "+ entry.topic);
@@ -89,11 +97,11 @@ public function main(){
 }
 
 function clientGetTable(){
-    string bId = "b1";//io:readln("Enter your booking id please: ");
+    localbId = "b1";//io:readln("Enter your booking id please: ");
     // useful when getting table name
     string bDate = "12-2-2019";//io:readln("Enter your booking date please: ");
-    if(bId != "" && bDate != ""){
-        json msgOut = {"bid":bId, "unique_string":myUniqueMsgId, "booking_date": bDate};
+    if(localbId != "" && bDate != ""){
+        json msgOut = {"bid":localbId, "unique_string":myUniqueMsgId, "booking_date": bDate};
         clientPublisher("get-table",msgOut.toString());
     }
 
@@ -102,7 +110,7 @@ function clientGetTable(){
 function tableHandler(){
     io:println("Welcome to your table");
     // "create-order", "leave-table", "request-bill", "do-payment", "request-menu"
-    io:println("1 - Menu\n2-Order\n3-request-bill\n4-pay\n5-Leave");
+    io:println("1 - Menu\n2 - Order\n3 - Request bill\n4 - Pay\n5 - Leave table");
     boolean b = true;
     while(b){
         var option = io:readln("Option: ");
@@ -111,11 +119,21 @@ function tableHandler(){
                 clientPublisher("request-menu",myUniqueMsgId);
             }
             "2" => {
-                io:println("Order templete: itemName quantity, itemName quantity....");
+                io:println("Order template: itemName quantity,[no-space]itemName quantity....");
                 string orderMsg = io:readln("What will you order:\n");
-                json msgOut = {"unique_id":myUniqueMsgId, "the_order": orderMsg};
+                json msgOut = {"unique_string":myUniqueMsgId, "the_order": orderMsg, "bId": localbId};
                 clientPublisher("create-order",msgOut.toString());
-                io:println("Your order is being processed....");
+                io:println("Your order is being processed, please wait....");
+            }
+            "3" => {
+                json msgOut = {"unique_string": myUniqueMsgId, "booking_id":localbId};
+                clientPublisher("request-bill",msgOut.toString());
+            }
+            "4" => {
+
+            }
+            "5" => {
+
             }
         }
     }

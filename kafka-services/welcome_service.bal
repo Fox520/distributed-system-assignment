@@ -59,9 +59,10 @@ service kafkaServiceWelcome on welcomeConsumer {
             // password to protect access to data from unauthorised actors
             res.setJsonPayload({"password": "my_password"}, contentType = "application/json");
             //send a request and check response 
-            // io:println("sedning");
+            
             http:Response response = checkpanic tableHTTPEP->post("/getBooking", res);
-            json data = checkpanic response.getJsonPayload();  //handleRequest(response);
+            json data = checkpanic response.getJsonPayload();
+            boolean hasFound = false;
             foreach var item in <json[]>data {
                 if(item["date"].toString() == booking_date){
                     // find table from the details
@@ -72,6 +73,7 @@ service kafkaServiceWelcome on welcomeConsumer {
                             tables[assignedTable] = supplied_booking_id;
                             foundTable(msg["unique_string"].toString(), tbl = assignedTable);
                             io:println("INFO: ",tables);
+                            hasFound = true;
                         }
                     }
                 }else{
@@ -79,8 +81,9 @@ service kafkaServiceWelcome on welcomeConsumer {
                 }
             }
             // if got here, likely means above resulted in table not being found
-            foundTable(msg["unique_string"].toString());
-            
+            if(hasFound == false){
+                foundTable(msg["unique_string"].toString());
+            }            
         }
     }
 
