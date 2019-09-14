@@ -7,6 +7,7 @@ import wso2/kafka;
 import ballerina/encoding;
 import ballerina/io;
 import ballerina/system;
+import ballerina/log;
 
 // client producer
 kafka:ProducerConfig producerConfigs = {
@@ -38,8 +39,8 @@ service kafkaService on clientConsumer{
                     io:StringReader sr = new (msg, encoding = "UTF-8");
                     json|error j =  sr.readJson();
                     if(j is json){
-                        if(j.Message != null && j.unique_string == myUniqueMsgId){
-                            io:println(j.Message);
+                        if(j.the_data.Message != null && j.unique_string == myUniqueMsgId){
+                            io:println(j.the_data.Message); // follow me to table or here's your table
                             return;
                         }
                         else{
@@ -49,11 +50,23 @@ service kafkaService on clientConsumer{
                     }
                 }
                 "get-menu" => {
-                    io:println("\n",msg,"\n");
+                    io:StringReader sr = new (msg, encoding = "UTF-8");
+                    json|error j =  sr.readJson();
+                    if(j is json){
+                        if(j.unique_string == myUniqueMsgId){
+                            // meant for us
+                            io:println(j["the_menu"]);
+                        }
+                    }else{
+                        log:printError("GetMenu Error", err = j);
+                    }
                     tableHandler();
                 }
                 "order-delivery" => {
                     // waiter should send this
+                }
+                _ => {
+                    io:println("No handler found for topic: "+ entry.topic);
                 }
             }
             
