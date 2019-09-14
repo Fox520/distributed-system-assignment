@@ -5,8 +5,8 @@ import ballerina/log;
 
 
 // reference Menu
-string menu = "Coke - 5.2\nFood - 9";
-
+//string menu = "Coke - 5.2\nFood - 9";
+json menu = {"Coke":5.2, "Food":9};
 // table producer
 kafka:ProducerConfig producerConfigsTable = {
     bootstrapServers: "localhost:9092",
@@ -42,7 +42,7 @@ service tableService on table_consumer{
             io:println("Topic: "+entry.topic +"; Received Message: "+ msg);
             match(entry.topic){
                 "create-order" => {
-                    createOrder(msg);
+                    error? variable = createOrder(msg);
                 }
                 "leave-table" => {
                     removeGuestsFromTable(msg);
@@ -61,12 +61,25 @@ service tableService on table_consumer{
     }
 }
 
-function createOrder(string msg){
+function createOrder(string msg) returns error?{
     io:StringReader sr = new (msg, encoding = "UTF-8");
     json|error j =  sr.readJson();
     if(j is json){
         string unique_str = j["unique_string"].toString();
         string the_order = j["the_order"].toString();
+        // itemName quantity, itemName quantity....
+        // split comma; then split space
+        float totalCost = 0;
+        string[] itemsToOrder = the_order.split(",");
+        foreach string itemAmount in itemsToOrder {
+            string[] kv = itemAmount.split(" ");
+            string itemName = kv[0];
+            int itemQuantity = check int.convert(kv[1]);
+            // one-liner 😎
+            totalCost += check float.convert(menu[itemName]) * itemQuantity;
+        }
+        json msgOut = {"total_cost": totalCost, "unique_string": the_order};
+        clientPublisherTable("take-delivery", msgOut.toString());
     }else{
         log:printError("CreateOrder Error", err = j);
     }
@@ -88,7 +101,8 @@ function doPayment(string msg){
 }
 
 function requestMenu(){
-    clientPublisher("get-menu",menu);
+    // TODO: modify display on client side
+    clientPublisher("get-menu",menu.toString());
 
 }
 
@@ -108,4 +122,9 @@ function getTableNameFromIndex(int i) returns string{
        2 => return "T3";
        _ => return "";
     }
+}
+
+function clientPublisherTable(string topic, string msg){
+    byte[] sMsg = msg.toByteArray("UTF-8");
+    var publish = kafkaProducerTable->send(sMsg, topic, partition = 0);
 }
