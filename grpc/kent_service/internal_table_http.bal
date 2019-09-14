@@ -6,7 +6,7 @@ import ballerina/io;
     basePath: "/table-manager"
 }
 const string PWD = "my password";
-service lectureService on new http:Listener(9092) {
+service lectureService on new http:Listener(8080) {
     
     @http:ResourceConfig{
         path: "/getBooking",
