@@ -3,8 +3,17 @@ import ballerina/encoding;
 import ballerina/io;
 
 
-// recieve booking json via http
+// reference Menu
+string menu = "Coke - 5.2\nFood - 9";
 
+// table producer
+kafka:ProducerConfig producerConfigs = {
+    bootstrapServers: "localhost:9092",
+    clientID: "table-producer",
+    acks: "all",
+    noRetries: 3
+};
+kafka:SimpleProducer kafkaProducer = new(producerConfigs);
 
 // Kafka consumer listener configurations
 kafka:ConsumerConfig tableConfig = {
@@ -44,7 +53,7 @@ service tableService on table_consumer{
                     doPayment(msg);
                 }
                 "request-menu" => {
-                    requestMenu(msg);
+                    requestMenu();
                 }
             }
         }
@@ -52,6 +61,8 @@ service tableService on table_consumer{
 }
 
 function createOrder(string msg){
+    io:println("What was ordered");
+    // send to the kitchen service and then from kitchen send to the client
 
 }
 
@@ -67,7 +78,8 @@ function doPayment(string msg){
 
 }
 
-function requestMenu(string msg){
+function requestMenu(){
+    clientPublisher("get-menu",menu);
 
 }
 
@@ -87,4 +99,9 @@ function getTableNameFromIndex(int i) returns string{
        2 => return "T3";
        _ => return "";
     }
+}
+
+function clientPublisher(string topic, string msg){
+    byte[] sMsg = msg.toByteArray("UTF-8");
+    var publish = kafkaProducer->send(sMsg, topic, partition = 0);
 }
