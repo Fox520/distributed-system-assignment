@@ -4,14 +4,14 @@ import ballerina/io;
 
 // this is used by all other producers within this directory
 // how ballerina works ;) [except when you change variable names]
-kafka:ProducerConfig producerConfigs = {
-    bootstrapServers: "localhost:9092",
-    clientID: "basic-producer",
-    acks: "all",
-    noRetries: 3
-};
+// kafka:ProducerConfig producerConfigs = {
+//     bootstrapServers: "localhost:9092",
+//     clientID: "basic-producer",
+//     acks: "all",
+//     noRetries: 3
+// };
 
-kafka:SimpleProducer kafkaProducer = new(producerConfigs);
+// kafka:SimpleProducer kafkaProducer = new(producerConfigs);
 
 // Kafka consumer listener configurations
 kafka:ConsumerConfig kitchenConfig = {
