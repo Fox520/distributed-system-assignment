@@ -33,6 +33,7 @@ message BookingId {
 message BookingResponse {
     BookingId bookingId = 1;
     Confirmation conf = 2;
+    string tableAssigned = 3;
 }
 
 message Confirmation {
