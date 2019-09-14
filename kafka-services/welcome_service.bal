@@ -24,7 +24,7 @@ kafka:ProducerConfig producerConfigsWelcome = {
     noRetries: 3
 };
 kafka:SimpleProducer kafkaProducerWelcome = new(producerConfigsWelcome);
-
+http:Client tableHTTPEP = new("http://localhost:9090/table-manager");
 
 public function foundTable(json data, string uniq){
     json gotTable = {"the_data":data, "unique_string": uniq};
@@ -46,14 +46,17 @@ listener kafka:SimpleConsumer welcomeConsumer = new(consumerConfigWelcome);
 service kafkaServiceWelcome on welcomeConsumer {
     resource function onMessage(kafka:SimpleConsumer simpleConsumer, kafka:ConsumerRecord[] records){
         foreach var entry in records {
+            http:Request res = new;
             byte[] sMsg = entry.value;
             json msg = encoding:byteArrayToString(sMsg);
             string bb = msg["bid"].toString();
             // send a message follow me to the table
             io:println("Topic: ", entry.topic,"; Received Message: ",msg);
-            http:Client clientEp = new ("http://localhost:5000/getBooking");
-            var res = clientEp->post("/getB",{bId: bb});
-            json data = handleRequest(res);
+            // get booking info from grpc service and publish to table or simply update the variable
+            res.setJsonPayload({bId: bb}, contentType = "application/json");
+            //send a request and check response 
+            var response = tableHTTPEP->post("/getBooking", res);
+            json data = handleRequest(response);
             // find the table
             foundTable(data, msg["unique_id"].toString());
             
