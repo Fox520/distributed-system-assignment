@@ -1,6 +1,7 @@
 import wso2/kafka;
 import ballerina/encoding;
 import ballerina/io;
+import ballerina/log;
 
 
 // reference Menu
@@ -61,6 +62,14 @@ service tableService on table_consumer{
 }
 
 function createOrder(string msg){
+    io:StringReader sr = new (msg, encoding = "UTF-8");
+    json|error j =  sr.readJson();
+    if(j is json){
+        string unique_str = j["unique_string"].toString();
+        string the_order = j["the_order"].toString();
+    }else{
+        log:printError("CreateOrder Error", err = j);
+    }
     io:println("What was ordered");
     // send to the kitchen service and then from kitchen send to the client
 
@@ -99,9 +108,4 @@ function getTableNameFromIndex(int i) returns string{
        2 => return "T3";
        _ => return "";
     }
-}
-
-function clientPublisher(string topic, string msg){
-    byte[] sMsg = msg.toByteArray("UTF-8");
-    var publish = kafkaProducer->send(sMsg, topic, partition = 0);
 }
