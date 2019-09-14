@@ -124,7 +124,6 @@ function doPayment(string msg){
 }
 
 function requestMenu(string uniq){
-    // TODO: modify display on client side
     json msgOut = {"unique_string": uniq, "the_menu": menu.toString()};
     clientPublisherTable("get-menu",msgOut.toString());
 
