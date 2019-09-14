@@ -3,10 +3,9 @@ import ballerina/io;
 
 
 @http:ServiceConfig {
-    basePath: "/table-manager"
+    basePath: "/"
 }
-const string PWD = "my password";
-service lectureService on new http:Listener(8080) {
+service internalService on new http:Listener(8080) {
     
     @http:ResourceConfig{
         path: "/getBooking",
@@ -17,7 +16,7 @@ service lectureService on new http:Listener(8080) {
         http:Response res = new;
         json incomingJSON = check request.getJsonPayload();
         string pwd = check string.convert(incomingJSON["password"]);
-        if(pwd == PWD){
+        if(pwd == "my_password"){
             res.setJsonPayload(booking, contentType = "application/json");
             check caller -> respond(res);
         }else{
