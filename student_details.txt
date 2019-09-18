@@ -1,5 +1,0 @@
-Name	   Surname		Student Number
-Carlos     Costa		218000731
-Gladwell   Fambi		218114028
-Garawaziva Excallent		218106076
-Thomas     David		218057245
