@@ -156,6 +156,7 @@ function tableHandler() {
                     "table_name": myAssignedTable
                 };
                 clientPublisher("leave-table", msgOut.toString());
+               
             }
         }
     }
