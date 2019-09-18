@@ -1,4 +1,6 @@
+run: bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 run: bin/kafka-server-start.sh -daemon config/server.properties
 run: bin/kafka-topics.sh --create --topic product-price --zookeeper localhost:2181 --replication-factor 1 --partitions 2
 run: python make_topics.py
-place make_topics.py and topics.txt in the kafka root directory
+
+NOTE: place make_topics.py and topics.txt in the kafka root directory
